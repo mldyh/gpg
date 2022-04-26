@@ -28,7 +28,7 @@ const Wizard = () => {
             Create Github Profile
           </a>
           <a href='https://github.com' className='gpg-button gpg-button-link gpg-button-small'>
-            Star Us
+            Open Source
           </a>
           <a href='https://github.com' className='gpg-button gpg-button-primary gpg-button-small'>
             Donate Us

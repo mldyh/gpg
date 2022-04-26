@@ -76,9 +76,11 @@ h4 {
   text-decoration: none;
   padding: calc(var(--gpg-size) / 3) var(--gpg-size);
   cursor: pointer;
-  font-size: 2em;
+  font-size: 1.5em;
+  font-weight: 300;
   outline: none;
   border: solid 1px var(--gpg-primary);
+  margin: 0 calc(calc(var(--gpg-size) / 4) + calc(var(--gpg-size) / 8));
 }
 
 .gpg-button:hover,
@@ -86,7 +88,7 @@ h4 {
 .gpg-button:focus-within,
 .gpg-button:focus-visible {
   outline: solid calc(var(--gpg-size) / 4) var(--gpg-grey);
-  outline-offset: calc(var(--gpg-size) / 4);
+  outline-offset: calc(var(--gpg-size) / 8);
 }
 
 /* sizes */
@@ -117,8 +119,10 @@ input {
   border-bottom: solid 1px var(--gpg-primary);
   border-radius: 0;
   padding: calc(var(--gpg-size) / 3) var(--gpg-size);
-  font-size: 2em;
+  overflow: overlay;
+  font-size: 1.5em;
   background-color: var(--gpg-grey);
+  margin: 0 calc(calc(var(--gpg-size) / 4) + calc(var(--gpg-size) / 8));
 }
 
 textarea:focus,
@@ -128,7 +132,7 @@ input:focus,
 input:focus-within,
 input:focus-visible {
   outline: solid calc(var(--gpg-size) / 4) var(--gpg-grey);
-  outline-offset: calc(var(--gpg-size) / 4);
+  outline-offset: calc(var(--gpg-size) / 8);
 }
 
 textarea.gpg-input-small,

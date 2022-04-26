@@ -6,5 +6,5 @@
 
 .steptwo__form textarea {
     margin-bottom: calc(var(--gpg-size) * 2);
-    width: 100%;
+    width: calc(100% - var(--gpg-size));
 }

@@ -27,11 +27,13 @@
 
 .wizard__content__body {
     flex: 1;
+    overflow-y: auto;
 }
 
 .wizard__content__footer {
     display: flex;
     flex-direction: column;
+    padding-top: calc(2 * var(--gpg-size));
 }
 
 .wizard__content__footer_link {
