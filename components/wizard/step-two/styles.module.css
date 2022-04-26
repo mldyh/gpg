@@ -1,0 +1,10 @@
+.steptwo__form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.steptwo__form textarea {
+    margin-bottom: calc(var(--gpg-size) * 2);
+    width: 100%;
+}

@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@300;500;600&family=Source+Code+Pro:wght@300&display=swap');
+
+:root {
+  --gpg-primary: #000;
+  --gpg-grey: #DEDEDE;
+
+  --gpg-size: 12px;
+}
+
+@media (min-width: 1200px) {
+  :root {
+    --gpg-size: 24px;
+  }
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Encode Sans', sans-serif;
+  font-size: var(--gpg-size);
+  font-weight: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::-moz-selection {
+  background: var(--gpg-grey);
+}
+
+::selection {
+  background: var(--gpg-grey);
+}
+
+/*
+ * Typography
+ */
+h1 {
+  font-size: 4em;
+  font-weight: 400;
+  margin: 0 0 calc(4 * var(--gpg-size)) 0;
+  padding: 0;
+}
+h2 {
+  font-size: 3em;
+  font-weight: 400;
+  margin: 0 0 calc(3 * var(--gpg-size)) 0;
+  padding: 0;
+}
+h3 {
+  font-size: 2em;
+  font-weight: 400;
+  margin: 0 0 calc(2 * var(--gpg-size)) 0;
+  padding: 0;
+}
+h4 {
+  font-size: 1em;
+  font-weight: 400;
+  margin: 0 0 calc(1 * var(--gpg-size)) 0;
+  padding: 0;
+}
+.text-primary {
+  color: var(--gpg-primary);
+}
+.text-grey {
+  color: var(--gpg-grey);
+}
+
+/**
+ * Button
+ */
+.gpg-button {
+  color: var(--gpg-primary);
+  text-decoration: none;
+  padding: calc(var(--gpg-size) / 3) var(--gpg-size);
+  cursor: pointer;
+  font-size: 2em;
+  outline: none;
+  border: solid 1px var(--gpg-primary);
+}
+
+.gpg-button:hover,
+.gpg-button:focus,
+.gpg-button:focus-within,
+.gpg-button:focus-visible {
+  outline: solid calc(var(--gpg-size) / 4) var(--gpg-grey);
+  outline-offset: calc(var(--gpg-size) / 4);
+}
+
+/* sizes */
+.gpg-button-small {
+  font-size: 1em;
+}
+
+/* states */
+.gpg-button-disabled {
+  cursor: not-allowed;
+  opacity: 50%;
+}
+
+/* variant */
+.gpg-button-link {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+/*
+ * text input
+ */
+textarea,
+input {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: solid 1px var(--gpg-primary);
+  border-radius: 0;
+  padding: calc(var(--gpg-size) / 3) var(--gpg-size);
+  font-size: 2em;
+  background-color: var(--gpg-grey);
+}
+
+textarea:focus,
+textarea:focus-within,
+textarea:focus-visible,
+input:focus,
+input:focus-within,
+input:focus-visible {
+  outline: solid calc(var(--gpg-size) / 4) var(--gpg-grey);
+  outline-offset: calc(var(--gpg-size) / 4);
+}
+
+textarea.gpg-input-small,
+input.gpg-input-small {
+  font-size: 1em;
+}

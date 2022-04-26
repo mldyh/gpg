@@ -1,0 +1,13 @@
+.stepone__form {
+    display: flex;
+}
+
+.stepone__form input{
+    flex: 1;
+}
+
+@media (min-width: 1200px) {
+    .stepone__form input{
+        margin-right: var(--gpg-size);
+    }
+}
