@@ -24,14 +24,11 @@ const Wizard = () => {
       </div>
       <div className={styles.wizard__content__footer}>
         <div className={styles.wizard__content__footer_link}>
-          <a href='/create-your-github-profile' className='gpg-button gpg-button-link gpg-button-small'>
+          <a href='https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/managing-your-profile-readme' target='_blank' className='gpg-button gpg-button-link gpg-button-small' rel="noreferrer">
             Create Github Profile
           </a>
-          <a href='https://github.com' className='gpg-button gpg-button-link gpg-button-small'>
+          <a href='https://github.com/maulidiyah-nur/gpg' target='_blank'  className='gpg-button gpg-button-link gpg-button-small' rel="noreferrer">
             Open Source
-          </a>
-          <a href='https://github.com' className='gpg-button gpg-button-primary gpg-button-small'>
-            Donate Us
           </a>
         </div>
       </div>
