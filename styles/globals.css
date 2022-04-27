@@ -1,23 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@300;500;600&family=Source+Code+Pro:wght@300&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap');
 :root {
   --gpg-primary: #000;
   --gpg-grey: #DEDEDE;
 
-  --gpg-size: 12px;
-}
-
-@media (min-width: 1200px) {
-  :root {
-    --gpg-size: 24px;
-  }
+  --gpg-size: 16px;
 }
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Encode Sans', sans-serif;
+  font-family: 'Maven Pro', sans-serif;
   font-size: var(--gpg-size);
   font-weight: normal;
 }
@@ -37,28 +30,8 @@ body {
 /*
  * Typography
  */
-h1 {
-  font-size: 4em;
-  font-weight: 400;
+h1, h2, h3, h4, h5, h6 {
   margin: 0 0 calc(4 * var(--gpg-size)) 0;
-  padding: 0;
-}
-h2 {
-  font-size: 3em;
-  font-weight: 400;
-  margin: 0 0 calc(3 * var(--gpg-size)) 0;
-  padding: 0;
-}
-h3 {
-  font-size: 2em;
-  font-weight: 400;
-  margin: 0 0 calc(2 * var(--gpg-size)) 0;
-  padding: 0;
-}
-h4 {
-  font-size: 1em;
-  font-weight: 400;
-  margin: 0 0 calc(1 * var(--gpg-size)) 0;
   padding: 0;
 }
 .text-primary {
@@ -72,23 +45,28 @@ h4 {
  * Button
  */
 .gpg-button {
-  color: var(--gpg-primary);
+  color: var(--gpg-grey);
+  background-color: var(--gpg-primary);
   text-decoration: none;
-  padding: calc(var(--gpg-size) / 3) var(--gpg-size);
+  padding: var(--gpg-size);
   cursor: pointer;
-  font-size: 1.5em;
-  font-weight: 300;
+  font-size: 1.15em;
   outline: none;
   border: solid 1px var(--gpg-primary);
-  margin: 0 calc(calc(var(--gpg-size) / 4) + calc(var(--gpg-size) / 8));
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .gpg-button:hover,
 .gpg-button:focus,
 .gpg-button:focus-within,
 .gpg-button:focus-visible {
-  outline: solid calc(var(--gpg-size) / 4) var(--gpg-grey);
-  outline-offset: calc(var(--gpg-size) / 8);
+  border-color: var(--gpg-primary);
+  outline: none;  
+  box-shadow: 0.5rem 0.5rem var(--gpg-grey);
 }
 
 /* sizes */
@@ -106,6 +84,7 @@ h4 {
 .gpg-button-link {
   background-color: transparent;
   border-color: transparent;
+  color: var(--gpg-primary);
 }
 
 /*
@@ -113,16 +92,13 @@ h4 {
  */
 textarea,
 input {
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-bottom: solid 1px var(--gpg-primary);
+  border: solid 1px var(--gpg-primary);
   border-radius: 0;
-  padding: calc(var(--gpg-size) / 3) var(--gpg-size);
+  padding: var(--gpg-size);
   overflow: overlay;
-  font-size: 1.5em;
-  background-color: var(--gpg-grey);
-  margin: 0 calc(calc(var(--gpg-size) / 4) + calc(var(--gpg-size) / 8));
+  font-size: 1.15em;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 textarea:focus,
@@ -131,8 +107,8 @@ textarea:focus-visible,
 input:focus,
 input:focus-within,
 input:focus-visible {
-  outline: solid calc(var(--gpg-size) / 4) var(--gpg-grey);
-  outline-offset: calc(var(--gpg-size) / 8);
+  outline: none;  
+  box-shadow: 0.5rem 0.5rem var(--gpg-grey);
 }
 
 textarea.gpg-input-small,

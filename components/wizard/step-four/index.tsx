@@ -17,7 +17,6 @@ const StepFour = ({ data, onChange, onContinue }: IStep) => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>, sl: string) => {
     const value = e.target.value;
     const nextData = {...data, socials: {...data.socials, [sl]: value}}
-    console.log({sl}, {value}, {nextData})
     onChange(nextData)
   }
 
