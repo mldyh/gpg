@@ -16,7 +16,16 @@ const StepFour = ({ data, onChange, onContinue }: IStep) => {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>, sl: string) => {
     const value = e.target.value;
-    const nextData = {...data, socials: {...data.socials, [sl]: value}}
+    const nextData = {
+      ...data, 
+      socials: {
+        ...data.socials, 
+        [sl]: {
+          ...data.socials?.[sl], 
+          username: value
+        }
+      }
+    }
     onChange(nextData)
   }
 
@@ -31,7 +40,7 @@ const StepFour = ({ data, onChange, onContinue }: IStep) => {
               const iconDefinition: IconDefinition = findIconDefinition(iconLookup)
               return (
                 <div key={sl} className={styles.stepfour__list__item}>
-                  <input placeholder={`${sl} username`} className="gpg-input-small" value={data.socials?.[sl] ?? ''} onChange={(e) => handleChange(e, sl)} />
+                  <input placeholder={`${sl} username`} className="gpg-input-small" value={data.socials?.[sl]?.username ?? ''} onChange={(e) => handleChange(e, sl)} />
                   <div>
                     <FontAwesomeIcon icon={iconDefinition} />
                   </div>

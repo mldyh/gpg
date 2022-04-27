@@ -8,7 +8,7 @@ Tired of updating your github profile page, use this tool to save your time. Of 
 - [x] Simple introduction
 - [ ] Tech Stack
 - [x] Social Link
-- [ ] Donation
+- [x] Donation
 - [ ] Download Markdown
 
 To Do

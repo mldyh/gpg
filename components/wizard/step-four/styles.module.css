@@ -1,9 +1,10 @@
 .stepfour__wrapper {
     margin-bottom: calc(var(--gpg-size) * 2);
-    justify-content: flex-end;
+    justify-content: center;
     align-items: flex-end;
     display: flex;
     flex-direction: column;
+    flex: 1;
 }
 .stepfour__list {
     display: flex;
@@ -31,4 +32,8 @@
 
 .stepfour__list__item > div {
     padding: calc(var(--gpg-size) / 2);
+}
+
+.stepfour__list__item img {
+    height: 52px;
 }
