@@ -33,3 +33,7 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
+
+#keys
+gh-pages
+gh-pages.pub
