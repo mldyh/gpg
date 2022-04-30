@@ -9,7 +9,7 @@ Tired of updating your github profile page, use this tool to save your time. Of 
 - [x] Tech Stack
 - [x] Social Link
 - [x] Donation
-- [ ] Download Markdown
+- [x] Markdown
 
 To Do
 
