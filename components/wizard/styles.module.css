@@ -20,28 +20,28 @@
 
 .wizard__content {
     flex: 1;
-    padding: calc(2 * var(--gpg-size));
     display: flex;
     flex-direction: column;
     max-height: 67vh;
 }
 
+.wizard__content__header {
+    display: flex;
+    justify-content: space-between;
+    padding: calc(2 * var(--gpg-size));
+}
+
+.wizard__content__header > div {
+    display: flex;
+}
+
 .wizard__content__body {
     flex: 1;
     overflow-y: auto;
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
-}
-
-.wizard__content__footer {
-    display: flex;
-    flex-direction: column;
-    padding-top: calc(2 * var(--gpg-size));
-}
-
-.wizard__content__footer_link {
-    display: flex;
-    justify-content: space-between;
+    padding: calc(2 * var(--gpg-size));
 }
 
 @media (min-width: 1200px) {

@@ -1,15 +1,16 @@
-.stepone__form {
+.stepone__row {
     display: flex;
-    flex: 1;
+    margin: 0 calc(-1 * var(--gpg-size));
+    flex-wrap: wrap;
+}
+
+.stepone__aligncenter {
+    justify-content: center;
+}
+
+.stepone__col {
+    display: flex;
+    flex: 1 1 25%;
     align-items: center;
-}
-
-.stepone__form input{
-    flex: 1;
-}
-
-@media (min-width: 1200px) {
-    .stepone__form input{
-        margin-right: var(--gpg-size);
-    }
+    padding: calc(1 * var(--gpg-size));
 }

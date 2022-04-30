@@ -3,7 +3,7 @@
   --gpg-primary: #000;
   --gpg-grey: #DEDEDE;
 
-  --gpg-size: 16px;
+  --gpg-size: 14px;
 }
 
 html,
@@ -31,8 +31,9 @@ body {
  * Typography
  */
 h1, h2, h3, h4, h5, h6 {
-  margin: 0 0 calc(4 * var(--gpg-size)) 0;
+  margin: 0;
   padding: 0;
+  font-weight: bold;
 }
 .text-primary {
   color: var(--gpg-primary);
@@ -96,9 +97,9 @@ input {
   border-radius: 0;
   padding: var(--gpg-size);
   overflow: overlay;
-  font-size: 1.15em;
+  font-size: 1em;
   margin-right: 0.5rem;
-  margin-bottom: 0.5rem;
+  flex: 1;
 }
 
 textarea:focus,
@@ -113,5 +114,51 @@ input:focus-visible {
 
 textarea.gpg-input-small,
 input.gpg-input-small {
-  font-size: 1em;
+  padding: 0 var(--gpg-size);
+  min-height: calc(2 * var(--gpg-size));
+}
+
+/*
+ * check box
+ */
+label.gpg-checkbox {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+}
+
+label.gpg-checkbox input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+label.gpg-checkbox .gpg-checkbox-marker {
+  height: calc(2 * var(--gpg-size));
+  width: calc(2 * var(--gpg-size));
+  background-color: transparent;
+  border: solid 1px var(--gpg-primary);
+  position: relative;
+}
+
+label.gpg-checkbox:focus,
+label.gpg-checkbox:focus-within,
+label.gpg-checkbox:focus-visible {
+  outline: none;  
+  box-shadow: 0.5rem 0.5rem var(--gpg-grey);
+}
+label.gpg-checkbox input[type="checkbox"]:checked ~ .gpg-checkbox-marker::after {
+  height: calc(var(--gpg-size) - 2px);
+  width: calc(var(--gpg-size) -  2px);
+  content: " ";
+  background-color: var(--gpg-primary);
+  top: calc(var(--gpg-size) / 2);
+  left: calc(var(--gpg-size) / 2);
+  position: absolute;
 }

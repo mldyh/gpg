@@ -1,0 +1,20 @@
+export const SOCIAL_LINKS = [
+    'facebook',
+    'twitter',
+    'linkedin',
+    'instagram',
+    'reddit',
+    'stackoverflow',
+    'dribbble',
+    'behance',
+    'dev.to',
+    'codepen',
+    'codesandbox',
+    'hackerrank',
+    'leetcode',
+    'topcoder',
+    'medium',
+    'discord',
+    'youtube',
+    'twitch'
+]
