@@ -3,14 +3,12 @@ import React from 'react';
 import { CATEGORIZED_SKILLS } from '../../../constants/skills';
 import { SOCIAL_LINKS } from '../../../constants/socials';
 import { SUPPORT_LINKS } from '../../../constants/support';
-import { IStep } from '../helper';
-import styles from './styles.module.css';
-
+import { IStep } from '../../../interfaces/steps';
 
 const StepOne = ({ data, onChange, onContinue }: IStep) => {
   
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    if (data.username?.trim().length > 0) {
+    if (data.greetings?.trim().length > 0) {
       onContinue();
     } else e.preventDefault();
   }
@@ -22,10 +20,7 @@ const StepOne = ({ data, onChange, onContinue }: IStep) => {
       ...data, 
       [fieldname]: subfield ? {
         ...data?.[fieldname],
-        [subfield]: {
-          ...data?.[fieldname]?.[subfield],
-          username: value
-        }
+        [subfield]: value
       } : value
     }
     onChange(nextData)
@@ -39,56 +34,41 @@ const StepOne = ({ data, onChange, onContinue }: IStep) => {
     }
     onChange(nextData)
   }
-
-  const placeholder = `🔭 I’m currently working on
-👯 I’m looking to collaborate on
-🤝 I’m looking for help with
-🌱 I’m currently learning
-💬 Ask me about
-⚡ Fun fact I've never been in space cause I'm using tab`
-
   return (
     <>
-      <div className={styles.stepone__row}>
-        <div className={styles.stepone__col}>
+      <div className="row">
+        <div className="col">
           <input 
             autoFocus 
-            placeholder={`Hi 👋, I'm Jane Doe from Indonesia`} 
-            value={data.username ?? ''} 
-            onChange={(e) => handleChange(e, 'username')}
+            value={data.greetings ?? ''} 
+            onChange={(e) => handleChange(e, 'greetings')}
             />
         </div>
       </div>
-      <div className={styles.stepone__row}>
-        <div className={styles.stepone__col}>
-          <h3>WORKS</h3>
-        </div>
-      </div>
-      <div className={styles.stepone__row}>
-        <div className={styles.stepone__col}>
+      <div className="row">
+        <div className="col">
           <textarea 
             rows={9} 
             value={data.bio ?? ''} 
             onChange={(e) => handleChange(e, 'bio')}
-            placeholder={placeholder}
             />
         </div>
       </div>
-      <div className={styles.stepone__row}>
-        <div className={styles.stepone__col}>
+      <div className="row">
+        <div className="col">
           <h3>SKILLS</h3>
         </div>
       </div>
         {CATEGORIZED_SKILLS.map((cs) => (
           <React.Fragment key={cs.title}>
-            <div className={styles.stepone__row}>
-              <div className={styles.stepone__col}>
+            <div className="row">
+              <div className="col">
                 <h4>{cs.title.toUpperCase()}</h4>
               </div>
             </div>
-            <div className={styles.stepone__row}>
+            <div className="row">
               {cs.skills.map((s) => (
-                <div key={s} className={styles.stepone__col}>
+                <div key={s} className="col">
                   <label className="gpg-checkbox">
                     <input 
                       type="checkbox" 
@@ -102,50 +82,50 @@ const StepOne = ({ data, onChange, onContinue }: IStep) => {
             </div>
           </React.Fragment>
         ))}
-      <div className={styles.stepone__row}>
-        <div className={styles.stepone__col}>
+      <div className="row">
+        <div className="col">
           <h3>SOCIAL NETWORK</h3>
         </div>
       </div>
-      <div className={styles.stepone__row}>
+      <div className="row">
         {
          SOCIAL_LINKS.map((sl) => {
             return (
-              <div key={sl} className={styles.stepone__col}>
+              <div key={sl} className="col">
                 <img src={`https://img.shields.io/badge/${sl}-000000?style=for-the-badge&logo=${sl}&logoColor=white`} />
                 <input 
                   placeholder={`username`} 
                   className="gpg-input-small" 
-                  value={data.socials?.[sl]?.username ?? ''} 
+                  value={data.socials?.[sl] ?? ''} 
                   onChange={(e) => handleChange(e, 'socials', sl as string)} />
               </div>
             )
           })
         }
       </div>
-      <div className={styles.stepone__row}>
-        <div className={styles.stepone__col}>
+      <div className="row">
+        <div className="col">
           <h3>SUPPORT</h3>
         </div>
       </div>
-      <div className={styles.stepone__row}>
+      <div className="row">
         {
           SUPPORT_LINKS.map((dl) => {
             return (
-              <div key={dl} className={styles.stepone__col}>
+              <div key={dl} className="col">
                 <img src={`https://img.shields.io/badge/${dl}-000000?style=for-the-badge&logo=${dl}&logoColor=white`} />
                 <input 
                   placeholder={`username`} 
                   className="gpg-input-small" 
-                  value={data.donations?.[dl]?.username ?? ''} 
+                  value={data.donations?.[dl] ?? ''} 
                   onChange={(e) => handleChange(e, "donations", dl as string)} />
               </div>
             )
           })
         }
       </div>
-      <div className={styles.stepone__row}>
-        <div className={`${styles.stepone__col} ${styles.stepone__aligncenter}`}>
+      <div className="row">
+        <div className="col align-center">
           <button className='gpg-button' onClick={handleClick}>
             GENERATE CODE
           </button>

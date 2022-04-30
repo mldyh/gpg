@@ -1,10 +1,8 @@
-import { ILink } from "./link";
-
 export interface IData {
-    username: string;
+    greetings: string;
     bio: string;
-    socials: ILink;
-    donations: ILink;
+    socials: {[name: string]: string};
+    donations: {[name: string]: string};
     skills: Array<string>;
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     [name: string]: any

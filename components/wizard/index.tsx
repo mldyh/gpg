@@ -1,17 +1,36 @@
 import React, { useState } from 'react';
 
+import { StepContent, STEPS } from '../../constants/steps';
 import { IData } from '../../interfaces/data';
-import { StepContent, STEPS } from './helper';
 import styles from './styles.module.css';
 
 const Wizard = () => {
-  const [data, setData] = useState<IData>({} as IData)
+  const [data, setData] = useState<IData>({
+    greetings: `Hi There 👋`,
+    bio: `I'm Jane Doe, a passionate Front End Developer from Indonesia.
+
+🔭 I’m currently working on
+
+👯 I’m looking to collaborate on
+
+🤝 I’m looking for help with
+
+🌱 I’m currently learning
+
+💬 Ask me about
+
+⚡ Fun fact I've never been in space cause I'm using tab`,
+socials: {},
+donations: {},
+skills: []
+  } as IData)
   const [step, setStep]  = useState(STEPS.USERNAME);
   const ContentComponent = StepContent(step);
 
   const handleStepChange = () => {
-    const newStep = step + 1;
-    setStep(newStep)
+    let nextStep = step + 1;
+    if (nextStep > STEPS.DONE) nextStep = STEPS.USERNAME;
+    setStep(nextStep);
   }
 
   return (

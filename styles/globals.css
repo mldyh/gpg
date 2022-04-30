@@ -162,3 +162,37 @@ label.gpg-checkbox input[type="checkbox"]:checked ~ .gpg-checkbox-marker::after 
   left: calc(var(--gpg-size) / 2);
   position: absolute;
 }
+
+/*
+ * Simple Grid
+ */
+.row {
+  display: flex;
+  margin: 0 calc(-1 * var(--gpg-size));
+  flex-wrap: wrap;
+}
+
+.col {
+  display: flex;
+  flex: 1 1 25%;
+  align-items: center;
+  padding: calc(1 * var(--gpg-size));
+  max-width: 100%;
+}
+
+.align-center {
+  justify-content: center;
+}
+
+.align-end {
+  justify-content: flex-end;
+}
+
+/*
+ * Simple Card
+ */
+.gpg-card {
+  padding: var(--gpg-size);
+  border: solid 1px var(--gpg-primary);
+  background-color: var(--gpg-grey);
+}

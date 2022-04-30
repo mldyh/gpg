@@ -52,4 +52,8 @@
     .wizard__content {
         max-height: unset;
     }
+
+    .wizard__content {
+        max-width: 67vw;
+    }
 }
